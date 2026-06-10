@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
+    <script src="cart.js" defer></script>
+</head>
+<body>
+<header class="cart_header">
+    <a href="../index.html" class="logo">
+        <img src="../image/logo/header-logo.png" alt="FILA">
+    </a>
+    <a href="#" class="user_icon">
+        <i class="fa-regular fa-user"></i>
+    </a>
+</header>
+
+<main>
+    <form class="cart_form" action="#">
+        <section class="cart_title">
+            <h1>장바구니</h1>
+        </section>
+
+        <section class="cart_select_bar">
+            <label>
+                <input type="checkbox" id="select_all" checked>
+                <span>전체선택</span>
+            </label>
+            <button type="button" id="clear_all">전체해지</button>
+        </section>
+
+        <div class="cart_layout">
+            <section class="cart_list">
+                <article class="cart_item" data-price="49900">
+                    <input type="checkbox" class="item_check" checked>
+
+                    <div class="item_image">
+                        <img src="../image/clothes1.png" alt="마이티셔츠 유니 세미오버핏">
+                    </div>
+
+                    <div class="item_info">
+                        <div class="item_top">
+                            <h2>마이티셔츠 유니 세미오버핏</h2>
+                            <button type="button" class="wish_btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <p>컬러: MELANGE GREY</p>
+                        <p>사이즈: M</p>
+                        <strong class="price">49,900원</strong>
+                        <span class="tag">UNISEX</span>
+
+                        <div class="quantity">
+                            <button type="button" class="minus">−</button>
+                            <span class="count">1</span>
+                            <button type="button" class="plus">＋</button>
+                        </div>
+
+                        <button type="button" class="delete_btn">삭제</button>
+                        <p class="subtotal">소계: <b>49,900원</b></p>
+                    </div>
+                </article>
+
+                <article class="cart_item" data-price="59900">
+                    <input type="checkbox" class="item_check" checked>
+
+                    <div class="item_image">
+                        <img src="../image/clothes2.webp" alt="마이티셔츠 여성 오버핏">
+                    </div>
+
+                    <div class="item_info">
+                        <div class="item_top">
+                            <h2>마이티셔츠 여성 오버핏</h2>
+                            <button type="button" class="wish_btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <p>컬러: WHITE</p>
+                        <p>사이즈: S</p>
+                        <strong class="price">59,900원</strong>
+                        <span class="tag">WOMEN</span>
+
+                        <div class="quantity">
+                            <button type="button" class="minus">−</button>
+                            <span class="count">1</span>
+                            <button type="button" class="plus">＋</button>
+                        </div>
+
+                        <button type="button" class="delete_btn">삭제</button>
+                        <p class="subtotal">소계: <b>59,900원</b></p>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="order_summary">
+                <div class="summary_box">
+                    <div class="summary_head">
+                        <h2>주문 상세내역</h2>
+                        <strong><span id="selected_count">2</span> 제품</strong>
+                    </div>
+
+                    <div class="summary_row">
+                        <span>제품 합계</span>
+                        <b id="product_total">109,800원</b>
+                    </div>
+
+                    <div class="summary_row">
+                        <span>배송비</span>
+                        <b>결제 단계에서 확인</b>
+                    </div>
+
+                    <div class="summary_total">
+                        <span>총 결제 금액</span>
+                        <b id="final_total">109,800원</b>
+                    </div>
+
+                    <div class="summary_row">
+                        <span>세금(VAT)</span>
+                        <b id="vat_total">9,982원</b>
+                    </div>
+                </div>
+
+                <button type="submit" class="order_btn">주문하기</button>
+
+                <p class="notice">
+                    무료 배송 대상 상품은 결제 단계에서 확인할 수 있습니다.
+                </p>
+            </aside>
+        </div>
+    </form>
+</main>
+</body>
+</html>

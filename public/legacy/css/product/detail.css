@@ -1,0 +1,646 @@
+.tag{
+    border-radius: 32px;
+    border: 1px solid black;
+    font-size: inherit;
+    padding: 2px 12px;
+}
+/******************************************/
+.accordion{
+    border: 1px solid black;
+    border-radius: 24px;
+}
+.accordion > .head{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.accordion > .body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/******************************************/
+#main{
+    display: flex;
+    height: 100vh;
+    background-color: #ffffff;
+}
+#main > div{
+    flex: 1;
+    height: 100%;
+    background-color: rgb(244 244 244);
+}
+#main > div > img{
+    width: 747px;
+    height: 747px;
+}
+#main > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/****************************************/
+#main .information{
+    width: 60%;
+}
+#main .information .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+#main .information .header .share{
+    border: unset;
+    background: unset;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+#main .information .title{
+    margin-bottom: 24px;
+}
+#main .information .title h1{
+    font-size: 42px;
+    font-weight: 500;
+}
+
+/*******************************/
+#main .information .group{
+    margin: 30px 0 52px;
+}
+#main .information .group li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 4px;
+}
+#main .information .group li a img{
+    width: 56px;
+    height: 56px;
+    border-bottom: 1px solid black;
+}
+
+.accordion > .head{
+    font-size: 16px;
+    padding: 22px 40px;
+}
+.accordion > .body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 0 20px 25px;
+}
+.accordion > .body > button{
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid lightgray;
+    background-color: transparent;
+    padding: 13px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#main .information .cart button{
+    width: 100%;
+    padding: 21px 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    margin-top: 10px;
+    border: unset;
+}
+#main .information .cart button strong{
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+/*********************************************/
+#detail .image_container{
+    top: 0;
+    left: 0;
+    display: grid;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-self: flex-start;
+    margin-top: 60px;
+}
+
+#detail .image_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+/*********************************************/
+#detail{
+    display: flex;
+    padding: 60px;
+}
+#detail > div{
+    flex: 1;
+}
+#detail .information{
+    padding: 60px;
+}
+#detail .information > div:first-child{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+#detail .information p.text{
+    color: gray;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 32px;
+}
+#detail .information span.text{
+    color: gray;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+#detail .accordion{
+    padding: unset;
+    border: none;
+    margin: 8px 0;
+}
+#detail .accordion > .head{
+    padding: 8px 0;
+    border-bottom: 1px solid black;
+}
+#detail .accordion > .body{
+    display: block;
+}
+#detail .accordion > .body.membership li{
+    display: list-item;
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 16px 0;
+    font-size: 14px;
+    font-weight: 400;
+    &::before{
+        content: "\2713";
+        margin-right: 12px;
+        font-weight: bold;
+    }
+}
+
+#detail .accordion > .product_information > div{
+    display: flex;
+    margin: 16px 0;
+    font-size: 15px;
+}
+#detail .accordion > .product_information span:first-child {
+    width: 140px;
+    font-weight: bold;
+}
+/*********************/
+#detail .fit_spec_guide{
+    padding: 32px 0;
+}
+
+#detail .accordion .fit_container{
+    display: flex;
+    padding: 32px 0;
+}
+#detail .accordion .fit_container > div{
+    flex: 1;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 20px 16px;
+    &:not(:last-child){
+        margin-right: 12px;
+    }
+}
+#detail .accordion .fit_container > div > span{
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    &:last-child{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+}
+
+#detail .accordion .progress_container{
+    position: relative;
+}
+
+#detail .accordion .progress.parent{
+    width: 100%;
+    height: 4px;
+    background-color: lightgray;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+#detail .accordion .progress.child{
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    animation-name: progressbar;
+    animation-duration: 1s;
+    transform: translateX(-50%);
+}
+@keyframes progressbar {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+#detail .accordion .spec{
+    margin: 40px 0;
+}
+#detail .accordion .spec_container .spec b{
+    display: block;
+    margin-bottom: 12px;
+}
+#detail .accordion .progress_container > div:last-child{
+    margin-top: 12px;
+}
+#detail .accordion .progress_container span{
+    position: absolute;
+    font-size: 12px;
+    transform: translateX(-50%);
+    &:nth-child(1){
+        left: 0;
+        transform: none;
+    }
+    &:nth-child(2){
+        left: 50%;
+    }
+    &:nth-child(3){
+        right: 0;
+        transform: none;
+    }
+}
+/*************************************/
+#detail_more{
+    background-color: black;
+    padding: 60px 0 60px 60px;
+}
+#checkpoint h2{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+#checkpoint .card_container{
+    display: flex;
+    gap: 32px;
+    margin-bottom: 60px;
+}
+#checkpoint h3{
+    color: white;
+    font-size: 24px;
+    margin: 32px 0 12px 0;
+}
+#checkpoint p{
+    width: 480px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    color: #d1d1d1;
+    margin-bottom: 32px;
+    line-height: 30px;
+}
+#checkpoint .card{
+    display: inline-block;
+    width: 480px;
+}
+#checkpoint .card .image_container{
+    width: 480px;
+    aspect-ratio: 1 / 1;
+}
+#checkpoint .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+#model_cut{
+    padding: 60px 0 60px 0;
+}
+#model_cut h2{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+#model_cut p{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 48px;
+    color: #d1d1d1;
+}
+#model_cut .model_container{
+    display: flex;
+    gap: 32px;
+}
+#model_cut .card{
+    display: inline-block;
+    width: 480px;
+}
+#model_cut .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/***********************************/
+
+#review{
+    padding: 40px 60px;
+}
+#review h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+#review > button{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 12px 100px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#review .rating{
+    display: flex;
+    padding: 40px;
+    border-bottom: 1px solid lightgray;
+}
+#review .average_rating{
+    padding-right: 40px;
+    border-right: 1px solid lightgray;
+}
+#review .average_rating h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    & > i{
+        color: darkblue;
+        font-size: 36px;
+    }
+}
+#review .average_rating > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    & > b{
+        font-weight: 700;
+        margin: 0 4px;
+    }
+    &:last-child{
+        color: gray;
+        margin-top: 12px;
+    }
+}
+
+
+#review .total_rating{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 40px;
+
+}
+#review .total_rating .stars{
+    display: inline-block;
+    color: yellow;
+}
+
+/****************************************/
+#review .photo_video{
+    padding: 32px 0;
+}
+#review .photo_video > .header{
+    display: flex;
+    justify-content: space-between;
+}
+#review .photo_video > .header > h3{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+#review .photo_video > .header > button{
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    cursor: pointer;
+    padding: 0;
+    & > i{
+        color: gray;
+        margin-right: 4px;
+    }
+}
+
+#review .photo_video > ul{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(140px, 1fr));
+    gap: 8px;
+}
+#review .photo_video .image_container{
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#review .photo_video img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#review .photo_video i{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 4px;
+    right: 4px;
+    color: white;
+}
+/**********************************************/
+#review .filter{
+    padding: 16px 0 16px 16px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+#review .filter > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#review .sort_container button{
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 16px;
+}
+#review .filter .search_container button{
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    cursor: pointer;
+    margin: 0 16px;
+    padding: 0;
+    & > i{
+        color: gray;
+        margin-right: 4px;
+    }
+}
+#review .filter .search{
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 200px;
+}
+#review .filter .search > i{
+    color: gray;
+    font-size: 14px;
+    margin-right: 4px;
+}
+#review .filter .search > input{
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+/**************************/
+#review .reviews .item{
+    display: flex;
+    padding: 24px 0;
+    border-bottom: 1px solid lightgray;
+}
+#review .reviews .item .contents{
+    flex: 1;
+}
+#review .reviews .item .contents .options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 12px 0;
+}
+#review .reviews .item .contents .options > span{
+    font-size: 13px;
+    color: gray;
+    border-left: 2px solid lightgray;
+    padding-left: 8px;
+}
+#review .reviews .item .contents .ai_box{
+    padding: 12px 16px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+#review .reviews .item .contents .ai_box > p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: black;
+}
+#review .reviews .item .contents .ai_box > p > span{
+    color: #007bff;
+    font-weight: 600;
+}
+#review .reviews .item .contents .user_icon > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#review .reviews .item .contents .content{
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: black;
+}
+#review .reviews .item .contents button{
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    cursor: pointer;
+    padding: 0;
+    & > i{
+        color: gray;
+        margin-right: 4px;
+    }
+}
+
+#review .reviews .item .images{
+}
+#review .reviews .item .images > .image_button{
+    width: 100px;
+    height: 100px;
+}
+#review .reviews .item .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accordion.close > .body {
+    display: none !important;
+}
+
+.accordion > .head i {
+    transition: 0.2s;
+    transform: rotate(180deg);
+}
+
+.accordion.close > .head i {
+    transform: rotate(0deg);
+}
+
+
+
+
